@@ -9,7 +9,7 @@ RUN echo deb http://nightly.odoo.com/7.0/nightly/deb/ ./ \
     > /etc/apt/sources.list.d/openerp-70.list \
  && export DEBIAN_FRONTEND=noninteractive LANG=en_US.UTF-8 \
  && apt-get update && apt-get install -y --allow-unauthenticated openerp \
- && mkdir /home/openerp && chown openerp:openerp /home/openerp \
+ && chown openerp:openerp /var/lib/openerp \
  && service postgresql start && su - postgres -c "createuser -d openerp" \
  && echo H4sIACx6i1MCA+3SwUrDQBAG4JzzFHkA66ZN2oLQg4eiB7WgeBIpMZnWQLMTZnfz/E5j \
  Ipi7YOH/Lsv8P1kysNySJWmvS7aH6I+kapXn/ammZ5pnaTRfZPlitc7Xy2WUztNM6yS6JNPlLsRb \
